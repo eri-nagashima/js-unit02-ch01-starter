@@ -3,21 +3,16 @@ import _ from 'lodash';
 const numContainer = [];
 
 function addRandomNum() {
-  const mainEl = document.getElementById('main');
   const randomNum = _.random(0, 10);
   let p = document.createElement('p');
   p.innerHTML = `Random Number: ${randomNum}`.toString();
   document.body.appendChild(p);
 
-  recordNum(randomNum);
-}
-
-function recordNum(num) {
-  numContainer.push(num);
-
-  if (numContainer.length === 6) {
+  numContainer.push(randomNum);
+  if (numContainer.length === 5) {
     numContainer.shift();
   }
+  // console.log(numContainer);
 }
 
 {
