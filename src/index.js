@@ -8,11 +8,10 @@ function addRandomNum() {
   p.innerHTML = `Random Number: ${randomNum}`.toString();
   document.body.appendChild(p);
 
-  numContainer.push(randomNum);
   if (numContainer.length === 5) {
     numContainer.shift();
   }
-  // console.log(numContainer);
+  numContainer.push(randomNum);
 }
 
 {
